@@ -1,0 +1,56 @@
+/* Style pour header */
+header{
+  display:flex;
+  justify-content: center;
+}
+header .fa-arrow-left{
+  color:black;
+  margin-right: 2rem;
+}
+
+/* style pour image restaurant */
+section .image{
+  width: 100%;
+  height: 7rem;
+  z-index:0;
+  margin: 1rem auto;
+  position:absolute;
+}
+.image img{
+  width:100%;
+  z-index:0;
+}
+
+/* style pour menu */
+
+ .menu{
+  background: #f6f6f6;
+  margin: -8rem auto;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  z-index: 3;
+   position:relative;
+}
+.menu h1{
+  margin: 2rem;
+  padding: 2rem 1rem;
+  display:flex;
+  justify-content: space-between;
+}
+
+.menu h1 .fa-heart{
+  color:red;
+  font-size: 120%;
+  top: -1rem;
+  right: 5rem;
+}
+/* style pour la carte */
+.carte h2{
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.carte hr{
+  width: 10%;
+  color:#99e2d0;
+  font-weight: 1200;
+}
