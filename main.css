@@ -1,27 +1,34 @@
-* , html {
+* {
     margin:0;
     padding:0;
-    font-size:100%;
+    
 }
-body{
+html , body{
    margin: 2% auto;
-   width: 90%;
-   font-size: 300%;
-  border-right:solid lightgray;
+    width: 90%;
+   font-size: 7px;
+    font-family: roboto;
+    }
+body{
+   /* border-right:solid lightgray;
     border-left:none;
     border-top:none;
-    border-bottom:none;
-  /* line-height: 2.5rem;*/
-   box-shadow: 1rem 2rem 2rem #f7f7f7;
-    font-family: roboto;
-     line-height: 6rem;
+    border-bottom:none;*/
+   line-height: 3.5rem;
+   
+    font-size: 2.5rem;
+}
+a{
+    text-decoration: none;
+    color:black;
 }
 header{
     text-align: center;
     margin: 5rem auto;
+  
 }
 header img{
-    width: 20rem;
+    width: 30rem;
 }
 /*style pour section présentation accueil*/
 .presentation{
@@ -31,7 +38,7 @@ header img{
     background: #f7f7f7;
     margin: 2rem 0;
     padding: 2rem auto;
-   
+    
    /* justify-self: center;
     align-self: center;
     vertical-align: center;*/
@@ -39,7 +46,22 @@ header img{
 .recherche{
     background: #EDEDED;
     text-align: center;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
+    display:flex;
+    justify-content: center;
+}
+.recherche .fa-map-marker-alt{
+    width: 10%;
+    margin-right:0;
+}
+.localiser{
+    width: 70%;
+    height: 4rem;
+    margin-top: 1rem;
+    background: #EDEDED;
+    border:none;
+    font-weight:bold;
+    text-align: center;
 }
 .btn{
     text-align: center;
@@ -48,39 +70,40 @@ header img{
 .btn h1{
     padding: 0.5rem 1.5rem;
 }
-.btn p{
-    opacity: 0.5;
-}
+/*.btn p{
+    opacity: 0.7;
+}*/
 button{
     background: #ff79da;
-    width: 70%;
-   /* height: 8em;*/
+    width: 35rem;
     border-radius:5rem;
     text-align: center;
     cursor:pointer;
     font-size: 100%;
-    padding: 0.7rem;
+    padding: 1.7rem;
     margin: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem lightgray;
 }
-
+button:hover{
+    background: #ff90da;
+    box-shadow: 0.5rem 0.5rem 1rem lightgray;
+}
 /* style pour section fonctionnement*/
 
 .fonction h2{
-    padding: 0.5rem ;
+    padding: 0.5rem 2.5rem ;
+    
 }
 .fonction ol{
-   /* display:flex;
-    flex-direction:column;*/
-   /* justify-content: space-evenly;*/
-  /*  justify-items: center;*/
+    display:flex;
+    flex-direction:column;
     padding: 1.5rem 0;
     list-style: none;
     counter-reset: li;
-  /*  align-content: center;*/
-    margin-left: 5rem;
-    /* width: 130rem;*/
+   justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
     position:relative;
-   /* align-content: space-evenly;*/
 }
 .fonction li::before{
     content:counter(li);
@@ -88,25 +111,27 @@ button{
     color:white;
     border-radius: 100% ;
     background: #9356dc;
-    padding: 0.6rem 2.8rem;
-    margin-left: -4.5rem;
+    padding:0.5rem 2rem;
+    margin-left: -10.5rem;
     font-weight: 900;
-    font-size: 80%;
-    position:absolute;
+    font-size: 50%;
+    position:relative;
     z-index:10;
 }
 .fas{
     color:#9356dc;
     padding: 2rem;
+    font-size:2.5rem;
 }
 .fonction ol li{
     counter-increment: li;
-    padding: 2.5rem 0.1rem;
+    padding: 1rem 0.1rem;
     text-align: center;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0.5rem;
     background:#f7f7f7;
     border-radius: 5rem;
-    width: 45rem;
+    width: 40rem;
+    box-shadow: 0.5rem 0.5rem 2rem #f7f7f7;
 }
 .fonction ol li a{
     color:black;
@@ -114,31 +139,160 @@ button{
  /*  margin-left: -1.2rem;*/
    text-align: center;
     text-decoration:none;
-    padding: 2.5rem;
+    padding: 0.5rem;
     z-index:0;
+    font-size: 80%;
 }
+
+/* style pour restaurant accueil */
 .restaurant{
     background: #f7f7f7;
     width: 100%;
     padding: 1.5rem 0 ;
 }
 .restaurant h2{
-    font-size: 150%;
     font-weight: 900;
-    padding: 1rem 0.5rem;
+    padding: 2rem 2.5rem;
 }
 .resto{
     width: 90%;
     background: white;
-    margin: 2rem auto;
+    margin: 1rem auto;
     margin-bottom: 4rem;
-    border-radius: 5rem;
+    border-radius: 3rem;
     display: flex;
     flex-direction:column;
+    height: 40rem;
+}
+.photo{
+   display:flex;
+   height: 70%;
     
 }
-.resto img{
+.photo img{
     width: 100%;
-    border-top-right-radius: 5rem;
-    border-top-left-radius: 5rem;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    z-index: 2;
+   object-fit: cover;
 }
+
+.photo p{
+    background: #99e2d0;
+    height: 15%;
+    z-index: 3;
+   margin-left: -15rem;
+    margin-top: 5rem;
+    text-align: center;
+   padding: 1rem;
+    color: green;
+}
+.texte{
+   display:flex ;
+    padding: 0.5rem 1.5rem ;
+   /* height: 10rem;*/
+    width:100%;
+    justify-content: space-between;
+}
+.texte p {
+    align-self: flex-start;
+  /*  margin-right: 5rem;*/
+    padding: 1.5rem 0.5rem ;
+    width: 70%;
+}
+.texte .far {
+    align-self: center;
+    font-size: 150%;
+    width: 20%;
+    cursor:resize;
+}
+.texte p:first-child{
+    font-weight: 600;
+}
+.texte p span {
+    font-weight: 300;
+    opacity:0.7;
+}
+/*.texte .far :onclick {
+    animation: change 0.5s;
+}
+@keyframe change {
+    0%: background: red;
+}*/
+
+
+/* style pour footer */
+footer ul{
+    list-style-type: none;
+    background: #353535;
+    color:white;
+    padding: 1rem 0.5rem; 
+}
+footer ul li a{
+    color: white;
+}
+footer .fas{
+    color:white;
+    font-size: 2rem;
+}
+footer ul li{
+    margin-left: 1rem;
+}
+/* style pour animation */
+
+    /* style pour loading spinner*/
+/*body{
+    position:relative;
+}
+.spinner{
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.spinner::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    overflow: hidden;
+    background: #0b0b0b;
+    opacity: 0.6; 
+}
+.spinner::after{
+    box-sizing: border-box;
+    z-index: 10002;
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    border: 3rem solid #f3f3f3;
+    border-top: 3rem solid #3498db;
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    -moz-animation: loading 1s linear infinite;
+    -webkit-animation: loading 1s linear infinite;
+    -o-animation: loading 1s linear infinite;
+    -ms-animation: loading 1s linear infinite;
+   }
+
+@-moz-keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+};
+@-webkit-keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+};
+@-o-keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+};
+@-ms-keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+};
+   */ 
