@@ -7,19 +7,23 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> 
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="main.css"/>
+        <link rel="stylesheet" href="resto_a_la_francais.html"/>
         <title>Ohmyfood</title>
     </head>
     <body>
-
+        <div class="spinner"></div>
         <header>
-            <img src="Maquettes Ohmyfood/images/logo/ohmyfood.png" alt="site commande ohmyfood"/>
+            <img src="Maquettes/images/logo/ohmyfood.png" alt="site commande ohmyfood"/>
         </header>
-
+        
         <section class="presentation"><!--section présentation-->
+            
             <div class="recherche">
-                <i class="fas fa-map-marker-alt"></i></div>
+                <i class="fas fa-map-marker-alt"></i><input type="text" class="localiser" placeholder="Paris, Belleville"/>
+            </div>
             <div class="btn">
                 <h1>Réservez le menu qui vous convient </h1>
                 <p>Découvrez des restaurants d'exceptions, sélectionnées par nos soins.</p>
@@ -39,62 +43,60 @@
         <section class="restaurant"><!--les restaurant-->
 
             <h2>Restaurant</h2><!--restaurant La palette du goût-->
-            <div class="resto">
+            <a class="resto" href="#">
                 <div class="photo">
-                    <img src="Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant La palette du goût"/>
+                    <img src="Maquettes/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant La palette du goût"/>
                     <p>Nouveau</p></div>
                 <div class="texte">
-                    <p >La palette du goût</p>
-                    <p class="position">Ménilmontant</p>   
-                    <i class="far fa-heart"></i>
+                    <p >La palette du goût 
+                        <br><span class="position">Ménilmontant</span></p>   
+                        <i class="far fa-heart"></i>
                 </div>
-            </div>
+            </a>
 
-            <div class="resto"><!--La note enchantée-->
+            <a class="resto" href="#"><!--La note enchantée-->
                 <div class="photo">
-                    <img src="Maquettes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant La note enchantéet"/>
+                    <img src="Maquettes/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant La note enchantéet"/>
                     <p>Nouveau</p>
             </div>
                 <div class="texte">
-                    <p >La note enchantée</p>
-                    <p class="position">Charonne</p>
+                    <p >La note enchantée
+                        <br><span class="position">Charonne</span></p>
                     <i class="far fa-heart"></i>
                 </div>
-            </div>
+            </a>
 
-            <div class="resto"><!--À la française-->
+            <a class="resto" href="resto_a_la_francais.html"><!--À la française-->
                 <div class="photo">
-                    <img src="Maquettes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant À la française"/>
+                    <img src="Maquettes/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant À la française"/>
                     <p>Nouveau</p>
                 </div>
                 <div class="texte">
-                    <p >À la française</p>
-                    <p class="position">Cité Rouge</p>
+                    <p >À la française
+                        <br><span class="position">Cité Rouge</span></p>
                     <i class="far fa-heart"></i>
                 </div>
-            </div>
+            </a>
 
-            <div class="resto"><!--Le délice des sens-->
+            <a class="resto" href="#"><!--Le délice des sens-->
                 <div class="photo">
-
-                    <img src="Maquettes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant Le délice des sens"/>
+                    <img src="Maquettes/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant Le délice des sens"/>
                     <p>Nouveau</p>
                 </div>
                 <div class="texte">
-                    <p >Le délice des sens</p>
-                    <p class="position">Folie-Méricourt</p>
+                    <p >Le délice des sens
+                        <br><span class="position">Folie-Méricourt</span></p>
                     <i class="far fa-heart"></i>
                 </div>
-            </div>
+            </a>
 
         <footer>
-
-        </footer>
         <ul>
             <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
             <li><a href="#""><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+    </footer>
     </body>
 </html>
