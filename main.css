@@ -76,7 +76,7 @@ button{
     cursor:pointer;
     font-size: 100%;
     padding: 1.7rem;
-    margin: 1rem;
+    margin: 1rem auto;
     box-shadow: 0.3rem 0.3rem 0.3rem lightgray;
 }
 button:hover{
@@ -221,9 +221,44 @@ button:hover{
     transition: 0.3s ease-in;
 }
 .coeur :hover .fas.fa-heart{
-    opacity: 1;
+   /* opacity: 1;*/
+    animation-name: fill  ;
+    animation-duration: 1s;
+    animation-fill-mode:forward ;
+    -webkit-animation-name: fill 1s forward;
+   -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: fill 1s forward;
+   -moz-animation-duration: 1s;
+    -moz-animation-fill-mode: forwards;
+   -o-animation-name: fill 1s forward;
+   -o-animation-duration: 1s;
+    -o-animation-fill-mode: forwards;
 }
-
+@keyframes fill {
+    0%{opacity:0;}
+    30%{opacity:0.3;}
+    60%{opacity:0.6;}
+    100%{opacity:1;}
+}
+@-webkit-keyframes fill {
+    0%{opacity:0;}
+    30%{opacity:0.3;}
+    60%{opacity:0.6;}
+    100%{opacity:1;}
+}
+@-o-keyframes fill {
+    0%{opacity:0;}
+    30%{opacity:0.3;}
+    60%{opacity:0.6;}
+    100%{opacity:1;}
+}
+@-moz-keyframes fill {
+    0%{opacity:0;}
+    30%{opacity:0.3;}
+    60%{opacity:0.6;}
+    100%{opacity:1;}
+}
 /* style pour footer */
 footer ul{
     list-style-type: none;
@@ -277,7 +312,7 @@ footer ul li{
     width: 20rem;
     height: 20rem;
     -moz-animation: loading 1s linear infinite;
-    -webkit-animation: loading 1s linear infinite;
+    -webkit-animation: loading 1s linear infinite ;
     -o-animation: loading 1s linear infinite;
     -ms-animation: loading 1s linear infinite;
    }
