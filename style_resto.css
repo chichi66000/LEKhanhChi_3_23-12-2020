@@ -25,7 +25,7 @@ section .image{
 
  .menu{
   background: #f6f6f6;
-  margin: -8rem auto;
+  margin-top: -8rem;
   border-top-left-radius: 4rem;
   border-top-right-radius: 4rem;
   z-index: 3;
@@ -39,7 +39,6 @@ section .image{
 }
 
 .menu h1 .fa-heart{
-  color:red;
   font-size: 120%;
   top: -1rem;
   right: 5rem;
@@ -47,10 +46,196 @@ section .image{
 /* style pour la carte */
 .carte h2{
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin: 1rem 3rem;
 }
 .carte hr{
   width: 10%;
   color:#99e2d0;
   font-weight: 1200;
+  margin-left: 3rem;
 }
+.carte ul{
+  list-style-type: none;
+}
+.carte ul li {
+  background:white;
+  border-radius: 3rem;
+  margin:2rem auto;
+  width: 90%;
+  padding: 0;
+  height:9rem;
+}
+.carte ul li a{
+  display:flex;
+  justify-content: space-between;
+  padding: 0rem;
+}
+.nom{
+  width: 80%;
+  padding: 1rem;
+}
+.nom p:first-child{
+  font-weight: 600;
+   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.nom p:last-child{
+  font-weight: 300;
+  opacity:0.8;
+  font-size: 2rem;
+   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* style pour prix*/
+.prix{
+  display: flex;
+  align-items: center;
+  width: 20%;
+  position:relative;
+ 
+}
+.prix p{
+  width: 100%;
+  margin-left: 40%;
+}
+
+.prix .fa-check-circle{
+  background: #99e2d0;
+  color:white;
+  height:5.5rem;
+  margin-left: 50%;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  padding-bottom: 0;
+  padding-top: 3.5rem;
+  text-align: center;
+   width:0%;
+   opacity: 0;
+}
+   /* style pour animation prix*/
+
+   .prix:hover > p{
+     animation-name: slide;
+  animation-fill-mode: forwards;
+  animation-duration:  0.5s;
+  -webkit-animation-name: slide;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-name: slide;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-duration: 0.5s;
+  -o-animation-name: slide;
+  -o-animation-fill-mode: forwards;
+  -o-animation-duration: 0.5s;
+  }
+@keyframes slide{
+  from{
+    margin-left:40%;
+    width:100%;
+  }
+  to{
+    margin-left: 0%;
+    width:50%;
+  }
+}
+@-webkit-keyframes slide{
+  from{
+    margin-left:40%;
+    width:100%;
+     }
+  to{
+    margin-left: 0%;
+    width:50%;
+     }
+}
+@-moz-keyframes slide{
+  from{
+    margin-left:40%;
+    width:100%;
+     }
+  to{
+    margin-left: 0%;
+    width:50%;
+     }
+}
+@-o-keyframes slide{
+  from{
+    margin-left:40%;
+    width:100%;
+     }
+  to{
+    margin-left: 0%;
+    width:50%;
+     }
+}
+.prix:hover > i{
+  animation-name:play;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  -webkit-name: play;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-name: play;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-fill-mode: forwards;
+  -o-name: play;
+  -o-animation-duration: 0.5s;
+  -o-animation-fill-mode: forwards;
+}
+@keyframes play{
+  from{
+    opacity: 0;
+    width:0%;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:100%;
+    margin-left: 0%;
+  }
+}
+@-webkit-keyframes play{
+  from{
+    opacity: 0;
+    width:0%;
+  }
+  to{
+    opacity: 1;
+    width:100%;
+  }
+}
+@-moz-keyframes play{
+  from{
+    opacity: 0;
+    width:0%;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:100%;
+    margin-left: 0%;
+  }
+}
+@-o-keyframes play{
+  from{
+    opacity: 0;
+    width:0%;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:100%;
+    margin-left: 0%;
+  }
+}
+
+/* style pour button commander*/
+button.commander{
+  margin:2rem 30% 10rem 30%;
+  width: 40%;
+}
+
+/* style pour footer */
