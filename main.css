@@ -33,15 +33,11 @@ header img{
     background: #f7f7f7;
     margin: 2rem 0;
     padding: 2rem auto;
-    
-   /* justify-self: center;
-    align-self: center;
-    vertical-align: center;*/
 }
 .recherche{
     background: #EDEDED;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem auto;
     display:flex;
     justify-content: center;
 }
@@ -65,9 +61,6 @@ header img{
 .btn h1{
     padding: 0.5rem 1.5rem;
 }
-/*.btn p{
-    opacity: 0.7;
-}*/
 button{
     background: #ff79da;
     width: 35rem;
@@ -279,7 +272,7 @@ footer ul li{
 /* style pour animation */
 
     /* style pour loading spinner*/
-/*body{
+body{
     position:relative;
 }
 .spinner{
@@ -293,14 +286,14 @@ footer ul li{
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 10001;
+   /* z-index: 10001;*/
     overflow: hidden;
-    background: #0b0b0b;
+  /*  background: #0b0b0b;*/
     opacity: 0.6; 
 }
 .spinner::after{
     box-sizing: border-box;
-    z-index: 10002;
+  /*  z-index: 10002;*/
     content: "";
     position: absolute;
     top: 10%;
@@ -311,26 +304,95 @@ footer ul li{
     border-radius: 50%;
     width: 20rem;
     height: 20rem;
-    -moz-animation: loading 1s linear infinite;
-    -webkit-animation: loading 1s linear infinite ;
-    -o-animation: loading 1s linear infinite;
-    -ms-animation: loading 1s linear infinite;
+     opacity: 1; 
+    animation: loading 4s ease-in both;
+    -moz-animation: loading 4s ease-in both;
+    -webkit-animation: loading 4s ease-in both ;
+    -o-animation: loading 4s ease-in both;
+    -ms-animation: loading 4s ease-in both;
    }
-
+@keyframes loading{
+    0% { transform: rotate(0deg); opacity:1; }
+    100% { transform: rotate(360deg); opacity:0;width:0%;height:0%;}
+}
 @-moz-keyframes loading {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-};
+     0% { transform: rotate(0deg); opacity:1;}
+    100% { transform: rotate(360deg); opacity:0;width:0%;height:0%;}
+}
 @-webkit-keyframes loading {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-};
+    0% { transform: rotate(0deg); opacity:1;;}
+    100% { transform: rotate(360deg);opacity:0; width:0%;height:0%;}
+}
 @-o-keyframes loading {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-};
+    0% { transform: rotate(0deg);opacity:1;}
+    100% { transform: rotate(360deg); opacity:0;width:0%;height:0%;}
+}
 @-ms-keyframes loading {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-};
-   */ 
+    0% { transform: rotate(0deg); opacity:1;}
+     100% { transform: rotate(360deg);opacity:0;width:0%;height:0%;}
+}
+    
+/* style pour petite mobile max_width:410px*/
+
+@media screen and (max-width:410px) {
+    header img{
+        width: 25rem;
+    }
+        body{
+            width:95%;
+        }
+    /*style pour section présentation accueil*/
+    .btn p{
+        display:none;
+    }
+    button{
+        width: max-content;
+        padding: 1.7rem 1rem;
+    }
+        
+       /* style pour section fonctionnement*/
+    .fonction ol{
+        padding: 1rem 0;
+    }
+    .fonction li::before{
+        display:none;
+    }
+    .fas{
+        padding: 2rem 5%;
+        font-size:3rem;
+    }
+    .fonction ol li{
+        padding: 0.5rem 0.1rem;
+        margin: 1.5rem 0.5rem;
+        width: 100%;
+    }
+    .fonction ol li a{
+        font-size: 85%;
+    }
+     /* style pour restaurant accueil */
+        .resto{
+        width: 95%;
+        height: 36rem;
+    }
+    .photo p{
+       margin-left: -10rem;
+    }
+    .texte{
+        padding: 0.5rem;
+        justify-content: space-between;
+    }
+    .coeur{
+        position:relative;
+        width: 30%;
+    }
+    .far.fa-heart {
+        margin-left: 2.5rem;
+        padding-top: 2.1rem;
+    }
+    .fas.fa-heart{
+        font-size: 120%;
+        top: -0.2rem;
+        left: -0.25rem;
+    }
+
+}
