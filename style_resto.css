@@ -11,7 +11,6 @@ header .fa-arrow-left{
 /* style pour image restaurant */
 section .image{
   width: 100%;
- /* height: 7rem;*/
   z-index:0;
   margin: 1rem auto;
   position:absolute;
@@ -71,6 +70,7 @@ section .image{
   padding: 2rem 1rem;
   display:flex;
   justify-content: space-between;
+  font-family:Shrikhand;
 }
 
 .menu h1 .fa-heart{
@@ -163,7 +163,7 @@ section .image{
 .carte hr{
   width: 10%;
   color:#99e2d0;
-  font-weight: 1200;
+  font-weight: 900;
   margin-left: 3rem;
 }
 .carte ul{
@@ -181,6 +181,9 @@ section .image{
   display:flex;
   justify-content: space-between;
   padding: 0rem;
+}
+.carte ul li a:hover{
+  opacity:0.6;
 }
 .nom{
   width: 80%;
@@ -334,3 +337,66 @@ button.commander{
   width: 40%;
 }
 /* style pour footer */
+
+/* style responsive petit mobile moins 410px*/
+@media screen and (max-width:410px) {
+  header img{
+    width: 25rem;
+}
+    body{
+        width:95%;
+      font-size: 1.7rem;
+    }
+    /* Style pour header */
+    /* style pour image restaurant */
+    .image img{
+      height: 30rem;
+    }
+    /* style pour menu */
+    .menu h1{
+      margin: 2rem 1rem;
+    }
+    .menu h1 .fa-heart{
+      font-size: 120%;
+      right: 3rem;
+    }
+    /* style pour la carte */
+.nom{
+  width: 65%;
+}
+  /* style pour prix*/
+.prix{
+  width: 30%;
+}
+  /* style pour button commander*/
+button.commander{
+  margin: 2rem 15% 10rem 15%;
+  width: 60%;
+}
+}
+
+/* style pour tablette */
+@media screen and (min-width:768px) and (max-width:1024px) {
+  body{
+    font-size: 3rem;
+  }
+  /* Style pour header */
+header .fa-arrow-left{
+  margin-right: 5rem;
+  font-size: 4.5rem;
+}
+  /* style pour image restaurant */
+.image img{
+  height: 40rem;
+}
+  /* style pour menu: pas changé */
+  /* style pour la carte */
+.carte ul li {
+  margin:3rem auto;
+}
+.carte ul li a{
+  padding-left: 2rem;
+}
+/* style pour prix: non changé */
+
+}
