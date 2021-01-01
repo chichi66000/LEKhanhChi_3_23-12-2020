@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 * {
     margin:0;
     padding:0;
@@ -32,12 +36,12 @@ header img{
     width:100%;
     background: #f7f7f7;
     margin: 2rem 0;
-    padding: 2rem auto;
+    padding: 2rem 0;
 }
 .recherche{
     background: #EDEDED;
     text-align: center;
-    padding: 1rem auto;
+    padding: 0.5rem;
     display:flex;
     justify-content: center;
 }
@@ -73,8 +77,9 @@ button{
     box-shadow: 0.3rem 0.3rem 0.3rem lightgray;
 }
 button:hover{
-    background: #ff90da;
+    background: #ff99da;
     box-shadow: 0.5rem 0.5rem 1rem lightgray;
+    opacity: 0.8;
 }
 /* style pour section fonctionnement*/
 
@@ -124,7 +129,6 @@ button:hover{
 .fonction ol li a{
     color:black;
     font-weight: 600;
- /*  margin-left: -1.2rem;*/
    text-align: center;
     text-decoration:none;
     padding: 0.5rem;
@@ -178,17 +182,20 @@ button:hover{
 .texte{
    display:flex ;
     padding: 0.5rem 1.5rem ;
-   /* height: 10rem;*/
     width:100%;
     justify-content: space-between;
 }
 .texte p {
     align-self: flex-start;
-  /*! margin-right: 5rem; */
     padding: 1.5rem 0.5rem ;
     width: 70%;
+} 
+.texte:hover>p{
+    opacity: 0.7;
 }
-    
+.position {
+    font-weight: 200;
+}
     /* Style pour animation coeur*/
 .coeur{
     position:relative;
@@ -197,7 +204,7 @@ button:hover{
 .far.fa-heart {
     font-size: 150%;
   /*  width: 10%;*/
-    cursor:resize;
+    cursor:pointer;
     position:absolute;
     margin-left: 7rem;
     padding-top: 2rem;
@@ -207,26 +214,17 @@ button:hover{
     font-size: 115%;
     top: -0.16rem;
     left: -2.3rem;
-    cursor:resize;
+    cursor:pointer;
     position: absolute;
     color:#ff79da;
     opacity:0;
     transition: 0.3s ease-in;
 }
-.coeur :hover .fas.fa-heart{
-   /* opacity: 1;*/
-    animation-name: fill  ;
-    animation-duration: 1s;
-    animation-fill-mode:forward ;
-    -webkit-animation-name: fill 1s forward;
-   -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-name: fill 1s forward;
-   -moz-animation-duration: 1s;
-    -moz-animation-fill-mode: forwards;
-   -o-animation-name: fill 1s forward;
-   -o-animation-duration: 1s;
-    -o-animation-fill-mode: forwards;
+.coeur:hover .fas.fa-heart{
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+   -o-animation: fill 1s forwards;
 }
 @keyframes fill {
     0%{opacity:0;}
@@ -252,6 +250,8 @@ button:hover{
     60%{opacity:0.6;}
     100%{opacity:1;}
 }
+
+
 /* style pour footer */
 footer ul{
     list-style-type: none;
@@ -268,6 +268,9 @@ footer .fas{
 }
 footer ul li{
     margin-left: 1rem;
+}
+footer ul li a:hover{
+    color:red;
 }
 /* style pour animation */
 
@@ -364,7 +367,7 @@ body{
     .fonction ol li{
         padding: 0.5rem 0.1rem;
         margin: 1.5rem 0.5rem;
-        width: 100%;
+        width: max-content;
     }
     .fonction ol li a{
         font-size: 85%;
@@ -375,7 +378,7 @@ body{
         height: 36rem;
     }
     .photo p{
-       margin-left: -10rem;
+       margin-left: -13rem;
     }
     .texte{
         padding: 0.5rem;
@@ -391,8 +394,54 @@ body{
     }
     .fas.fa-heart{
         font-size: 120%;
-        top: -0.2rem;
-        left: -0.25rem;
+        top: -0.25rem;
+        left: -0.40rem;
     }
+}
 
+@media sreen and (min-width:767px) and (max-width:1024px) {
+   
+}
+@media screen and (min-width: 1025px){
+    
+    /* style pour restaurant accueil */
+
+.resto{
+    width: 90%;flex-direction:row;
+}
+.photo{
+   height: 100%;
+    width:65%;
+}
+.photo img{
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 3rem;
+}
+
+.texte{
+    width:35%;
+}
+.texte p {
+    align-self: center;
+    padding: 1.5rem 0.5rem ;
+    width: 70%;
+}
+   .coeur{
+    position:relative;
+    width: 30%;
+    height: 100%;
+    top: 40%;
+} 
+    
+    /*style pour presentation et fonctionnement*/
+    .presentation{
+        float:left;
+        width:49%;
+            
+    }
+    .fonction{
+        width:40%;
+        float:right;
+    }
 }
