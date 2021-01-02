@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
 /* Style pour header */
 header{
   display:flex;
@@ -70,7 +75,7 @@ section .image{
   padding: 2rem 1rem;
   display:flex;
   justify-content: space-between;
-  font-family:Shrikhand;
+  font-family: Shrikhand;
 }
 
 .menu h1 .fa-heart{
@@ -183,7 +188,7 @@ section .image{
   padding: 0rem;
 }
 .carte ul li a:hover{
-  opacity:0.6;
+  opacity:0.8;
 }
 .nom{
   width: 80%;
@@ -355,10 +360,11 @@ button.commander{
     /* style pour menu */
     .menu h1{
       margin: 2rem 1rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
-    .menu h1 .fa-heart{
-      font-size: 120%;
-      right: 3rem;
+    .menu h1 .fa-heart{display:none;
     }
     /* style pour la carte */
 .nom{
@@ -397,6 +403,46 @@ header .fa-arrow-left{
 .carte ul li a{
   padding-left: 2rem;
 }
-/* style pour prix: non changé */
+/* style pour prix: non changé*/
+/* style pour button commander:non changé*/
+/* style pour footer non changé*/
+}
 
+/* style pour grand écran plus 1025px*/
+@media screen and (min-width:1025px) {
+  
+  /* Style pour header */
+header .fa-arrow-left{
+  margin-right: 3rem;
+  font-size: 3rem;
+}
+
+/* style pour image restaurant */
+.image img{
+  height: 70rem;
+}
+  /* style pour menu */
+.menu h1 .fa-heart{
+  right: 10rem;
+}
+  /* style pour la carte */
+.carte h2{
+  font-size: 3.5rem;
+}
+.carte hr{
+  width: 5%;
+}
+.carte ul li {
+  width: 70%;
+}
+/* style pour prix: non changé*/
+  .prix .fa-check-circle{
+    font-size: 3.5rem;
+  }
+  /* style pour button commander*/
+button.commander{
+  margin:2rem 40% 10rem 40%;
+  width: 20%;
+}
+/* style pour footer: non changé */
 }
