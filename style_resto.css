@@ -191,7 +191,7 @@ section .image{
   opacity:0.8;
 }
 .nom{
-  width: 80%;
+  width: 70%;
   padding: 1rem;
 }
 .nom p:first-child{
@@ -213,7 +213,7 @@ section .image{
 .prix{
   display: flex;
   align-items: center;
-  width: 20%;
+  width: 30%;
   position:relative;
  
 }
@@ -229,11 +229,12 @@ section .image{
   margin-left: 50%;
   border-top-right-radius: 2.5rem;
   border-bottom-right-radius: 2.5rem;
-  padding-bottom: 0;
-  padding-top: 3.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 2.5rem;
   text-align: center;
-   width:0%;
+   width:0;
    opacity: 0;
+  font-size: 4rem;
 }
    /* style pour animation prix*/
 
@@ -292,46 +293,48 @@ section .image{
 @keyframes play{
   from{
     opacity: 0;
-    width:0%;
+    width:0;
     margin-left: 50%;
   }
   to{
     opacity: 1;
-    width:100%;
+    width:15rem;
     margin-left: 0%;
   }
 }
 @-webkit-keyframes play{
   from{
     opacity: 0;
-    width:0%;
+    width:0;
+     margin-left: 50%;
   }
   to{
     opacity: 1;
     width:100%;
+     margin-left: 0%;
   }
 }
 @-moz-keyframes play{
   from{
     opacity: 0;
-    width:0%;
+    width:0;
     margin-left: 50%;
   }
   to{
     opacity: 1;
-    width:100%;
+    width:15rem;
     margin-left: 0%;
   }
 }
 @-o-keyframes play{
   from{
     opacity: 0;
-    width:0%;
+    width:0;
     margin-left: 50%;
   }
   to{
     opacity: 1;
-    width:100%;
+    width:15rem;
     margin-left: 0%;
   }
 }
@@ -347,7 +350,7 @@ button.commander{
 @media screen and (max-width:410px) {
   header img{
     width: 25rem;
-}
+  }
     body{
         width:95%;
       font-size: 1.7rem;
@@ -364,21 +367,76 @@ button.commander{
       overflow: hidden;
       white-space: nowrap;
     }
-    .menu h1 .fa-heart{display:none;
+    .menu h1 .fa-heart{
+      display:none;
     }
     /* style pour la carte */
-.nom{
-  width: 65%;
-}
+    .nom{
+      width: 70%;
+    }
   /* style pour prix*/
-.prix{
-  width: 30%;
+  .prix{
+    width: 30%;
+  }
+  .prix .fa-check-circle{
+    font-size: 2.5rem;
+    height:5.5rem;
+  padding-bottom: 0rem;
+  padding-top: 3.5rem;
+  }
+  @keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:60%;
+    margin-left: 0%;
+  }
+  }
+    @-webkit-keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+     margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:60%;
+     margin-left: 0%;
+  }
+}
+    @-moz-keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:60%;
+    margin-left: 0%;
+  }
+}
+    @-o-keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:60%;
+    margin-left: 0%;
+  }
 }
   /* style pour button commander*/
-button.commander{
-  margin: 2rem 15% 10rem 15%;
-  width: 60%;
-}
+  button.commander{
+    margin: 2rem 15% 10rem 15%;
+    width: 60%;
+  }
 }
 
 /* style pour tablette */
@@ -404,13 +462,21 @@ header .fa-arrow-left{
   padding-left: 2rem;
 }
 /* style pour prix: non changé*/
+  .nom{
+    width: 80%;
+  }
+  .prix{
+    width:20%;
+  }
 /* style pour button commander:non changé*/
 /* style pour footer non changé*/
 }
 
 /* style pour grand écran plus 1025px*/
 @media screen and (min-width:1025px) {
-  
+   body{
+    font-size: 3rem;
+  }
   /* Style pour header */
 header .fa-arrow-left{
   margin-right: 3rem;
@@ -436,8 +502,11 @@ header .fa-arrow-left{
   width: 70%;
 }
 /* style pour prix: non changé*/
-  .prix .fa-check-circle{
-    font-size: 3.5rem;
+   .nom{
+    width: 80%;
+  }
+  .prix{
+    width:20%;
   }
   /* style pour button commander*/
 button.commander{
