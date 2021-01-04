@@ -319,32 +319,34 @@ body{
     border-radius: 50%;
     width: 20rem;
     height: 20rem;
-     opacity: 1; 
-    animation: loading 4s ease-in both;
-    -moz-animation: loading 4s ease-in both;
-    -webkit-animation: loading 4s ease-in both ;
-    -o-animation: loading 4s ease-in both;
-    -ms-animation: loading 4s ease-in both;
+    z-index:0;
+    background:black;
+    opacity: 1; 
+    animation: loading 4s ease-in forwards;
+    -moz-animation: loading 4s ease-in forwards;
+    -webkit-animation: loading 4s ease-in forwards ;
+    -o-animation: loading 4s ease-in forwards;
+    -ms-animation: loading 4s ease-in forwards;
    }
 @keyframes loading{
-    0% { transform: rotate(0deg); opacity:1;;}
-    100% { transform: rotate(360deg); opacity:0;width:0%;height:0%;}
+    0% { transform: rotate(0deg); opacity:1; ;}
+    100% { transform: rotate(360deg); opacity:0;width:0%;height:0%; visibility:hidden;z-index:0;}
 }
 @-moz-keyframes loading {
-     0% { transform: rotate(0deg); opacity:1;}
-    100% { transform: rotate(360deg); opacity:0;width:0%;height:0%;}
+     0% { transform: rotate(0deg); opacity:1;;}
+    100% { transform: rotate(360deg); opacity:0;width:0%;height:0%;visibility:hidden;z-index:0;}
 }
 @-webkit-keyframes loading {
-    0% { transform: rotate(0deg); opacity:1;}
-    100% { transform: rotate(360deg);opacity:0; width:0%;height:0%;}
+    0% { transform: rotate(0deg); opacity:1;;}
+    100% { transform: rotate(360deg);opacity:0; width:0%;height:0%;visibility:hidden;z-index:0;}
 }
 @-o-keyframes loading {
     0% { transform: rotate(0deg);opacity:1;}
-    100% { transform: rotate(360deg); opacity:0;width:0%;height:0%;}
+    100% { transform: rotate(360deg); opacity:0;width:0%;height:0%;visibility:hidden;}
 }
 @-ms-keyframes loading {
     0% { transform: rotate(0deg); opacity:1;}
-     100% { transform: rotate(360deg);opacity:0;width:0%;height:0%;}
+     100% { transform: rotate(360deg);opacity:0;width:0%;height:0%;visibility:hidden;}
 }
     
 /* style pour petite mobile max_width:410px*/
