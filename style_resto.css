@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
+/* Style pour header */
+header{
+  display:flex;
+  justify-content: center;
+}
+header .fa-arrow-left{
+  color:black;
+  margin-right: 2rem;
+}
+
+/* style pour image restaurant */
+section .image{
+  width: 100%;
+  z-index:0;
+  margin: 1rem auto;
+  position:absolute;
+}
+.image img{
+  width:100%;
+  z-index:0;
+  height: 35rem;
+  object-fit: cover;
+  opacity: 0;
+  animation: show 3s ease-in forwards;
+  animation-delay: 2s;
+  -webkit-animation: show 5s ease-in forwards;
+  -moz-animation: show 5s ease-in forwards;
+  -o-animation: show 5s ease-in forwards;
+}
+@keyframes show{
+  0%{opacity: 0;}
+  30%{opacity: 0.3;}
+  50%{opacity: 0.5;}
+  0%{opacity: 0.7;}
+  100%{opacity: 1;}
+}
+@-webkit-keyframes show{
+   0%{opacity: 0;}
+  30%{opacity: 0.3;}
+  50%{opacity: 0.5;}
+  0%{opacity: 0.7;}
+  100%{opacity: 1;}
+}
+@-moz-keyframes show{
+  0%{opacity: 0;}
+  30%{opacity: 0.3;}
+  50%{opacity: 0.5;}
+  0%{opacity: 0.7;}
+  100%{opacity: 1;}
+}
+@-o-keyframes show{
+   0%{opacity: 0;}
+  30%{opacity: 0.3;}
+  50%{opacity: 0.5;}
+  0%{opacity: 0.7;}
+  100%{opacity: 1;}
+}
+/* style pour menu */
+
+ .menu{
+  background: #f6f6f6;
+  margin-top: -8rem;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  z-index: 3;
+   position:relative;
+  }
+.menu h1{
+  margin: 2rem;
+  padding: 2rem 1rem;
+  display:flex;
+  justify-content: space-between;
+  font-family: Shrikhand;
+}
+
+.menu h1 .fa-heart{
+  font-size: 120%;
+  top: -1rem;
+  right: 5rem;
+}
+/*style pour animation menu*/
+.carte{
+  opacity: 0;
+  height:0;
+  animation: fadeout 3s ease-in forwards;
+  animation-delay: 2s;
+  -webkit-animation: fadeout 3s ease-in forwards;
+  -webkit-animation-delay: 2s;
+  -moz-animation: fadeout 3s ease-in forwards;
+  -moz-animation-delay: 2s;
+  -o-animation: fadeout 3s ease-in forwards;
+  -o-animation-delay: 2s;
+}
+@keyframes fadeout{
+  0%{opacity: 0;
+    height:0;
+    margin-top: 10rem;
+    }
+  20%{opacity: 0.5;
+  height:20%;}
+  40%{opacity: 0.6;
+  height:40%;}
+  60%{opacity: 0.8;
+  height:60%;}
+  80%{opacity: 0.9;
+  height:80%;}
+  100%{opacity: 1;
+  height:100%;}
+}
+@-webkit-keyframes fadeout{
+  0%{opacity: 0;
+    height:0;
+    margin-top: 10rem;
+    }
+  20%{opacity: 0.5;
+  height:20%;}
+  40%{opacity: 0.6;
+  height:40%;}
+  60%{opacity: 0.8;
+  height:60%;}
+  80%{opacity: 0.9;
+  height:80%;}
+  100%{opacity: 1;
+  height:100%;}
+}
+@-moz-keyframes fadeout{
+  0%{opacity: 0;
+    height:0;
+    margin-top: 10rem;
+    }
+  20%{opacity: 0.5;
+  height:20%;}
+  40%{opacity: 0.6;
+  height:40%;}
+  60%{opacity: 0.8;
+  height:60%;}
+  80%{opacity: 0.9;
+  height:80%;}
+  100%{opacity: 1;
+  height:100%;}
+}
+@-o-keyframes fadeout{
+  0%{opacity: 0;
+    height:0;
+    margin-top: 10rem;
+    }
+  20%{opacity: 0.5;
+  height:20%;}
+  40%{opacity: 0.6;
+  height:40%;}
+  60%{opacity: 0.8;
+  height:60%;}
+  80%{opacity: 0.9;
+  height:80%;}
+  100%{opacity: 1;
+  height:100%;}
+}
+/* style pour la carte */
+.carte h2{
+  text-transform: uppercase;
+  margin: 1rem 3rem;
+}
+.carte hr{
+  width: 10%;
+  color:#99e2d0;
+  font-weight: 900;
+  margin-left: 3rem;
+}
+.carte ul{
+  list-style-type: none;
+}
+.carte ul li {
+  background:white;
+  border-radius: 3rem;
+  margin:2rem auto;
+  width: 90%;
+  padding: 0;
+  height:9rem;
+}
+.carte ul li a{
+  display:flex;
+  justify-content: space-between;
+  padding: 0rem;
+}
+.carte ul li a:hover{
+  opacity:0.8;
+}
+.nom{
+  width: 70%;
+  padding: 1rem;
+}
+.nom p:first-child{
+  font-weight: 600;
+   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.nom p:last-child{
+  font-weight: 300;
+  opacity:0.8;
+  font-size: 2rem;
+   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* style pour prix*/
+.prix{
+  display: flex;
+  align-items: center;
+  width: 30%;
+  position:relative;
+ 
+}
+.prix p{
+  width: 100%;
+  margin-left: 40%;
+}
+
+.prix .fa-check-circle{
+  background: #99e2d0;
+  color:white;
+  height:5.5rem;
+  margin-left: 50%;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 2.5rem;
+  text-align: center;
+   width:0;
+   opacity: 0;
+  font-size: 4rem;
+}
+   /* style pour animation prix*/
+
+   .prix:hover > p{
+     animation: slide 0.5s forwards;
+  -webkit-animation: slide 0.5s forwards;
+  -moz-animation: slide 0.5s forwards ;
+  -o-animation: slide 0.5s forwards;
+  }
+@keyframes slide{
+  from{
+    margin-left:40%;
+    width:100%;
+  }
+  to{
+    margin-left: 0%;
+    width:50%;
+  }
+}
+@-webkit-keyframes slide{
+  from{
+    margin-left:40%;
+    width:100%;
+     }
+  to{
+    margin-left: 0%;
+    width:50%;
+     }
+}
+@-moz-keyframes slide{
+  from{
+    margin-left:40%;
+    width:100%;
+     }
+  to{
+    margin-left: 0%;
+    width:50%;
+     }
+}
+@-o-keyframes slide{
+  from{
+    margin-left:40%;
+    width:100%;
+     }
+  to{
+    margin-left: 0%;
+    width:50%;
+     }
+}
+.prix:hover > i{
+  animation:play 0.5s forwards;
+  -webkit-animation: play 0.5s forwards;
+  -moz-animation: play 0.5s forwards;
+  -o-animation: play 0.5s forwards;
+}
+@keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:15rem;
+    margin-left: 0%;
+  }
+}
+@-webkit-keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+     margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:100%;
+     margin-left: 0%;
+  }
+}
+@-moz-keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:15rem;
+    margin-left: 0%;
+  }
+}
+@-o-keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:15rem;
+    margin-left: 0%;
+  }
+}
+
+/* style pour button commander*/
+button.commander{
+  margin:2rem 30% 10rem 30%;
+  width: 40%;
+}
+/* style pour footer */
+
+/* style responsive petit mobile moins 410px*/
+@media screen and (max-width:410px) {
+  header img{
+    width: 25rem;
+  }
+    body{
+        width:95%;
+      font-size: 1.7rem;
+    }
+    /* Style pour header */
+    /* style pour image restaurant */
+    .image img{
+      height: 30rem;
+    }
+    /* style pour menu */
+    .menu h1{
+      margin: 2rem 1rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .menu h1 .fa-heart{
+      display:none;
+    }
+    /* style pour la carte */
+    .nom{
+      width: 70%;
+    }
+  /* style pour prix*/
+  .prix{
+    width: 30%;
+  }
+  .prix .fa-check-circle{
+    font-size: 2.5rem;
+    height:5.5rem;
+  padding-bottom: 0rem;
+  padding-top: 3.5rem;
+  }
+  @keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:60%;
+    margin-left: 0%;
+  }
+  }
+    @-webkit-keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+     margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:60%;
+     margin-left: 0%;
+  }
+}
+    @-moz-keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:60%;
+    margin-left: 0%;
+  }
+}
+    @-o-keyframes play{
+  from{
+    opacity: 0;
+    width:0;
+    margin-left: 50%;
+  }
+  to{
+    opacity: 1;
+    width:60%;
+    margin-left: 0%;
+  }
+}
+  /* style pour button commander*/
+  button.commander{
+    margin: 2rem 15% 10rem 15%;
+    width: 60%;
+  }
+}
+
+/* style pour tablette */
+@media screen and (min-width:768px) and (max-width:1024px) {
+  body{
+    font-size: 3rem;
+  }
+  /* Style pour header */
+header .fa-arrow-left{
+  margin-right: 5rem;
+  font-size: 4.5rem;
+}
+  /* style pour image restaurant */
+.image img{
+  height: 40rem;
+}
+  /* style pour menu: pas changé */
+  /* style pour la carte */
+.carte ul li {
+  margin:3rem auto;
+}
+.carte ul li a{
+  padding-left: 2rem;
+}
+/* style pour prix: non changé*/
+  .nom{
+    width: 80%;
+  }
+  .prix{
+    width:20%;
+  }
+/* style pour button commander:non changé*/
+/* style pour footer non changé*/
+}
+
+/* style pour grand écran plus 1025px*/
+@media screen and (min-width:1025px) {
+   body{
+    font-size: 3rem;
+  }
+  /* Style pour header */
+header .fa-arrow-left{
+  margin-right: 3rem;
+  font-size: 3rem;
+}
+
+/* style pour image restaurant */
+.image img{
+  height: 70rem;
+}
+  /* style pour menu */
+.menu h1 .fa-heart{
+  right: 10rem;
+}
+  /* style pour la carte */
+.carte h2{
+  font-size: 3.5rem;
+}
+.carte hr{
+  width: 5%;
+}
+.carte ul li {
+  width: 70%;
+}
+/* style pour prix: non changé*/
+   .nom{
+    width: 80%;
+  }
+  .prix{
+    width:20%;
+  }
+  /* style pour button commander*/
+button.commander{
+  margin:2rem 40% 10rem 40%;
+  width: 20%;
+}
+/* style pour footer: non changé */
+}
