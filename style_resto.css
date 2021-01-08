@@ -180,56 +180,55 @@ section .image{
   margin:2rem auto;
   width: 90%;
   padding: 0;
- /* height:12rem;*/
 }
 .carte ul li a{
   display:flex;
- /* justify-content: space-between;*/
   padding: 0rem;
   height:100%;
-  height: 12rem;
+  height: 9rem;
 }
 .carte ul li a:hover{
   opacity:0.8;
 }
 .nom{
+  width: 33rem;
   width: 80%;
-  padding-left: 1rem;
+  padding: 1rem 0 1rem 1rem;
   height: 100%;
   display:flex;
   flex-direction: column;
-  flex-wrap:wrap;
-  justify-content: center;
 }
 .nom p:first-child{
   font-weight: 600;
-  /*text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;*/
+ text-overflow: ellipsis;
+    overflow: hidden;
 }
 .nom p:last-child{
   font-weight: 300;
   opacity:0.8;
   font-size: 2rem;
-  /* text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;*/
+  overflow: hidden;
 }
 
 /* style pour prix*/
 .prix{
   display: flex;
-   height:100%;
-  width: 15rem;
+  height:100%;
+  width:10rem;
+  width: 20%;
   position:relative;
   border-top-right-radius: 2.5rem;
   border-bottom-right-radius: 2.5rem;
+  
 }
 .prix p{
   width: 100%;
   margin-left: 40%;
-  align-self: center;
-  padding-bottom: 1rem;
+  align-self: flex-end;
+  padding-bottom: 2rem;
 }
 
 .prix .fa-check-circle{
@@ -238,93 +237,140 @@ section .image{
   border-top-right-radius: 2.5rem;
   border-bottom-right-radius: 2.5rem;
   text-align: center;
-   width:0;
-   opacity: 0;
+  width:0;
+  opacity: 0;
+  padding-left: 1.5rem;
   font-size: 4rem;
 }
 .far.fa-check-circle{
  padding-top: 3rem;
 }
    /* style pour animation prix*/
-.prix:hover ~ .nom {
-  background:red;
+.plat:hover > .nom {
+  animation: reduit 0.5s forwards;
+  -webkit-animation: reduit 0.5s forwards;
+  -moz-animation: reduit 0.5s forwards;
+  -o-animation: reduit 0.5s forwards;
+}
+.plat:hover > .prix {
+  animation: stretch 0.5s forwards;
+  -webkit-animation: stretch 0.5s forwards;
+  -moz-animation: stretch 0.5s forwards;
+  -o-animation: stretch 0.5s forwards;
 }
 
-.prix:hover{
- animation: stretch 0.5s forwards;
-}
-@keyframes stretch{
-  from{background:none;
+@keyframes reduit {
+  from{width:80%;
+    margin-right:0;
   }
-  to{background: #99e2d0;
+  to{width:60%;
+    margin-right:20%;
+ }
+}
+@-webkit-keyframes reduit {
+  from{width:80%;
+    margin-right:0;
   }
+  to{width:60%;
+    margin-right:20%;
+ }
 }
-@-webkit-keyframes stretch{
-  from{background:none;}
-  to{background: #99e2d0;}
+@-moz-keyframes reduit {
+  from{width:80%;
+    margin-right:0;
+  }
+  to{width:60%;
+    margin-right:20%;
+ }
 }
-@-moz-keyframes stretch{
-  from{background:none;}
-  to{background: #99e2d0;}
-}
-@-o-keyframes stretch{
-  from{background:none;}
-  to{background: #99e2d0;}
+@-o-keyframes reduit {
+  from{width:80%;
+    margin-right:0;
+  }
+  to{width:60%;
+    margin-right:20%;
+ }
 }
 
-
-   .prix:hover > p{
-     animation: slide 0.5s forwards;
-  -webkit-animation: slide 0.5s forwards;
-  -moz-animation: slide 0.5s forwards ;
-  -o-animation: slide 0.5s forwards;
+@keyframes stretch {
+  from{
+    background:none;
   }
+  to{
+    background:#99e2d0;
+  }
+  }
+@-webkit-keyframes stretch {
+  from{
+    background:none;
+    }
+  to{
+     background:#99e2d0;
+    }
+  }
+@-moz-keyframes stretch {
+  from{
+    background:none;
+    }
+  to{
+    background:#99e2d0;
+    }
+  }
+@-o-keyframes stretch {
+  from{
+    background:none;
+    }
+  to{
+    background:#99e2d0;
+    } 
+   }
+
+.plat:hover > .prix p{
+  animation: slide 0.5s forwards;
+}
 @keyframes slide{
   from{
-    margin-left:0%;
+   margin-left:40%;
     width:100%;
   }
   to{
-    margin-left: -55%;
+   margin-left: -55%;
     width:50%;
     }
 }
 @-webkit-keyframes slide{
   from{
-    margin-left:0%;
+   margin-left:40%;
     width:100%;
   }
   to{
-    margin-left: -55%;
+   margin-left: -55%;
     width:50%;
     }
 }
 @-moz-keyframes slide{
   from{
-    margin-left:0%;
+   margin-left:40%;
     width:100%;
   }
   to{
-    margin-left: -55%;
+   margin-left: -55%;
     width:50%;
     }
 }
 @-o-keyframes slide{
   from{
-    margin-left:0%;
+   margin-left:40%;
     width:100%;
   }
   to{
-    margin-left: -55%;
+   margin-left: -55%;
     width:50%;
     }
 }
-
-.prix:hover > i{
-  animation:play 0.5s forwards;
-  -webkit-animation: play 0.5s forwards;
-  -moz-animation: play 0.5s forwards;
-  -o-animation: play 0.5s forwards;
+.plat:hover > .prix i {
+  animation: play 0.3s forwards;
+  animation-delay: 0.3s;
 }
 @keyframes play{
   from{
@@ -335,7 +381,7 @@ section .image{
   }
   to{
     opacity: 1;
-    width:15rem;
+    width:50%;
     margin-left: 0%;
      transform: rotate(360deg)
   }
@@ -349,7 +395,7 @@ section .image{
   }
   to{
     opacity: 1;
-    width:15rem;
+    width:50%;
     margin-left: 0%;
      transform: rotate(360deg)
   }
@@ -363,7 +409,7 @@ section .image{
   }
   to{
     opacity: 1;
-    width:15rem;
+    width:50%;
     margin-left: 0%;
      transform: rotate(360deg)
   }
@@ -377,11 +423,12 @@ section .image{
   }
   to{
     opacity: 1;
-    width:15rem;
+    width:50%;
     margin-left: 0%;
      transform: rotate(360deg)
   }
 }
+
 /* style pour button commander*/
 button.commander{
   margin:2rem 30% 10rem 30%;
@@ -414,33 +461,89 @@ button.commander{
       display:none;
     }
     /* style pour la carte */
-    .nom{
-      width: 70%;
-    }
-  /* style pour prix*/
-  .carte ul li a{
-  display:flex;
- /* justify-content: space-between;*/
-  padding: 0rem;
-  height:100%;
-  height: 12rem;
-}
-.carte ul li a:hover{
-  opacity:0.8;
-}
+  
 .nom{
-  width: 80%;
+  width: 70%;
 }
   .prix{
     width: 20%;
   }
   .prix .fa-check-circle{
     font-size: 2.5rem;
-    height:5.5rem;
-  padding-bottom: 0rem;
-  padding-top: 3.5rem;
   }
-  
+@keyframes reduit {
+  from{width:70%;
+    margin-right:0;
+  }
+  to{width:60%;
+    margin-right:16%;
+ }
+}
+@-webkit-keyframes reduit {
+  from{width:70%;
+    margin-right:0;
+  }
+  to{width:60%;
+    margin-right:16%;
+ }
+}
+@-moz-keyframes reduit {
+  from{width:70%;
+    margin-right:0;
+  }
+  to{width:60%;
+    margin-right:16%;
+ }
+}
+@-o-keyframes reduit {
+  from{width:70%;
+    margin-right:0;
+  }
+  to{width:60%;
+    margin-right:20%;
+ }
+}
+
+@keyframes stretch {
+  from{
+    background:none;
+    width:20%;
+  }
+  to{
+    background:#99e2d0;
+    width:22%;
+  }
+  }
+  @-webkit-keyframes stretch {
+    from{
+      background:none;
+      width:20%;
+    }
+    to{
+      background:#99e2d0;
+      width:22%;
+    }
+  }
+  @-moz-keyframes stretch {
+    from{
+      background:none;
+      width:20%;
+    }
+    to{
+      background:#99e2d0;
+      width:22%;
+    }
+    }
+  @-o-keyframes stretch {
+    from{
+      background:none;
+      width:20%;
+      }
+    to{
+      background:#99e2d0;
+      width:22%;
+      }
+      }
   /* style pour button commander*/
   button.commander{
     margin: 2rem 15% 10rem 15%;
@@ -478,29 +581,42 @@ header .fa-arrow-left{
     width:15rem;
   }
   /* style animation prix */
-  @keyframes stretch{
-  from{background:none;
-  width:15rem;}
-  to{background: #99e2d0;
-  width: 15rem;}
+
+@keyframes stretch {
+  from{
+    background:none;
+  }
+  to{
+    background:#99e2d0;
+    margin-left: 10%;
+  }
+  }
+@-webkit-keyframes stretch {
+  from{
+    background:none;
+    }
+  to{
+    background:#99e2d0;
+    margin-left: 10%;
+    }
 }
-@-webkit-keyframes stretch{
-  from{background:none;
-  width:15rem;}
-  to{background: #99e2d0;
-  width:15rem;}
-}
-@-moz-keyframes stretch{
-  from{background:none;
-  width:15rem;}
-  to{background: #99e2d0;
-  width:15rem;}
-}
-@-o-keyframes stretch{
-from{background:none;
-width:15rem;}
-to{background: #99e2d0;
-width:15rem;}
+@-moz-keyframes stretch {
+  from{
+    background:none;
+  }
+  to{
+    background:#99e2d0;
+    margin-left: 10%;
+  }
+  }
+@-o-keyframes stretch {
+  from{
+    background:none;
+    }
+    to{
+    background:#99e2d0;
+    margin-left: 10%;
+    }
 }
 /* style pour button commander:non changé*/
 /* style pour footer non changé*/
@@ -545,28 +661,24 @@ header .fa-arrow-left{
   /* style pour animation prix */
   
   @keyframes stretch{
-    from{background:none;
-    width:15rem;}
-    to{background: #99e2d0;
-    width:15rem;}
+    from{background:none;}
+        to{background: #99e2d0;
+    margin-left:10%}
   }
   @-webkit-keyframes stretch{
-    from{background:none;
-    width:15rem;}
+    from{background:none;}
     to{background: #99e2d0;
-    width:15rem;}
+      margin-left:10%}
   }
   @-moz-keyframes stretch{
-    from{background:none;
-    width:15rem;}
+    from{background:none;}
     to{background: #99e2d0;
-    width:15rem;}
+      margin-left:10%}
   }
   @-o-keyframes stretch{
-  from{background:none;
-  width:15rem;}
-  to{background: #99e2d0;
-  width:15rem;}
+    from{background:none;}
+    to{background: #99e2d0;
+      margin-left:10%}
 }
   /* style pour button commander*/
 button.commander{

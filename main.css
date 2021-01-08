@@ -66,7 +66,8 @@ header img{
     padding: 0.5rem 1.5rem;
 }
 button{
-    background: #ff79da;
+    background: linear-gradient(#ff79da,#ce23c3) ;
+    
     width: 35rem;
     border-radius:5rem;
     text-align: center;
@@ -74,7 +75,7 @@ button{
     font-size: 100%;
     padding: 1.7rem;
     margin: 1rem auto;
-    box-shadow: 0.3rem 0.3rem 0.3rem lightgray;
+    box-shadow: 0.1rem 0.1rem 0.3rem lightgray;
 }
 button:hover{
     background: #ff99da;
