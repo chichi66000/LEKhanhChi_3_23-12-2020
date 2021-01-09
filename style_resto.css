@@ -185,7 +185,6 @@ section .image{
   display:flex;
   padding: 0rem;
   height:100%;
-  height: 9rem;
 }
 .carte ul li a:hover{
   opacity:0.8;
@@ -200,17 +199,17 @@ section .image{
 }
 .nom p:first-child{
   font-weight: 600;
-  white-space: nowrap;
+ /* white-space: nowrap;
  text-overflow: ellipsis;
-    overflow: hidden;
+    overflow: hidden;*/
 }
 .nom p:last-child{
   font-weight: 300;
   opacity:0.8;
   font-size: 2rem;
-  text-overflow: ellipsis;
+/*  text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: hidden;*/
 }
 
 /* style pour prix*/
@@ -222,7 +221,7 @@ section .image{
   position:relative;
   border-top-right-radius: 2.5rem;
   border-bottom-right-radius: 2.5rem;
-  
+  height: auto;
 }
 .prix p{
   width: 100%;
@@ -251,6 +250,11 @@ section .image{
   -webkit-animation: reduit 0.5s forwards;
   -moz-animation: reduit 0.5s forwards;
   -o-animation: reduit 0.5s forwards;
+}
+.plat:hover > .nom p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .plat:hover > .prix {
   animation: stretch 0.5s forwards;
